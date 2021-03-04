@@ -1,0 +1,26 @@
+$myColor: #232121;
+$hoverBlack: #282828;
+$myGrey: #444444;
+
+
+$phone: 464px;
+$tablet-phone: 1024px;
+$desktop: 1024px;
+
+@mixin phone {
+  @media (max-width: $phone) {
+    @content;
+  }
+}
+
+@mixin tablet-phone {
+  @media (max-width: $tablet-phone) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: $desktop) {
+    @content;
+  }
+}

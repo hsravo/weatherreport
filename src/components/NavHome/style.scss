@@ -1,0 +1,28 @@
+@import "../../variables.scss";
+
+#nav {
+    background-color:transparent;
+    z-index:5;
+    box-shadow:none;  
+      #main-title {
+          color:white;
+        font-weight:700;
+          font-size:2rem;
+      }
+      #main-button {
+        top:0;
+        margin-left:auto;
+        display:flex;
+        justify-content:right;
+        color:white;
+        background-color:transparent !important;
+        border:1px solid white !important;
+        border-radius: 0.5rem;
+        &:hover {
+            color:$myColor;
+            background-color:white !important;
+            border:1px solid $myColor !important;
+            transition:0.3s;
+        }
+      }
+}
