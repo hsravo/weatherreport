@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Button, Form, Jumbotron, Container } from "react-bootstrap";
-import { faCompass } from "@fortawesome/free-solid-svg-icons";
+import { faCompass, faLocationArrow } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import NavHome from "../components/NavHome";
 import CityReport from "../components/CityReport";
@@ -83,7 +83,7 @@ const Home = () => {
           placeholder="Nom de la ville..."
         />
         <Button id="buttonCity" onClick={fetchCity}>
-          GO !
+          <FontAwesomeIcon icon={faLocationArrow} />
         </Button>
         </div>
         <Button id="buttonReset" onClick={resetAll}>
