@@ -14,7 +14,7 @@ $desktop: 1024px;
 }
 
 @mixin tablet-phone {
-  @media (max-width: $tablet-phone) {
+  @media (min-width: $phone) and (max-width: $tablet-phone) {
     @content;
   }
 }
