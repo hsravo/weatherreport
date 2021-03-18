@@ -15,7 +15,7 @@ import "./index.scss";
 
 const APIKEY = "c911e035070122cd8ab54a2fd22a2269";
 
-const cities = ["Paris", "Marseille", "Lyon", "Strasbourg", "Bordeaux", "Brest", "Lille"];
+const cities = ["Paris", "Marseille", "Lyon", "Strasbourg", "Bordeaux", "Rennes", "Lille"];
 
 const Home = () => {
   const [currentTime] = useState(new Date());
