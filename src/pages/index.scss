@@ -41,6 +41,7 @@
             display:flex;
             align-items: center;
             flex-direction: column;
+            min-height:90vh;
             #searchSelect {
                 display:flex;
                 flex-direction: column;
@@ -182,10 +183,11 @@
                 display:flex;
                 align-items: center;
                 flex-direction: column;
+                min-height:90vh;
                 #searchSelect {
                     display:flex;
                     flex-direction: column;
-                    margin:3rem;
+                    margin:1em;
                     width:30vw;
                     align-items:center;
                     #searchSelect-title {
@@ -312,11 +314,12 @@
             display:flex;
             align-items: center;
             flex-direction: column;
+            min-height:95vh;
             #searchSelect {
                 display:flex;
                 flex-direction: row;
                 justify-content: center;
-                margin:3rem;
+                margin:1em;
                 width:70vw;
                 #searchSelect-title {
                     font-size:2rem;

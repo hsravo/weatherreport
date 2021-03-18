@@ -8,15 +8,19 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import NavHome from "../components/NavHome";
 import CityReport from "../components/CityReport";
-import cities from "../data/cities.json";
+import locations from "../data/cities.js";
 import moon from "../assets/video/moon.mp4";
 import sky from "../assets/video/sky.mp4";
 import "./index.scss";
 
 const APIKEY = "c911e035070122cd8ab54a2fd22a2269";
 
+const cities = ["Paris", "Marseille", "Lyon", "Strasbourg", "Bordeaux", "Brest", "Lille"];
+
 const Home = () => {
   const [currentTime] = useState(new Date());
+  const regionOptions = new Map(locations.map((location) => [location.region]));
+  const [selectedRegion, setSelectedRegion] = useState("");
   const [searchCity, setSearchCity] = useState("");
   const [results, setResults] = useState("");
 
@@ -44,6 +48,16 @@ const Home = () => {
     });
   };
 
+  // const regionChange = (e) => {
+  //   setSelectedRegion(e.target.value);
+  // };
+
+  // useEffect(() => {
+  //   console.log(selectedRegion);
+  //   locations.filter((location) => String(location.region) === selectedRegion);
+  // }, [selectedRegion]);
+
+
   const handleChange = (event) => {
     const { value } = event.target;
     console.log(value);
@@ -58,7 +72,6 @@ const Home = () => {
 
   return (
     <div id="fullHomepage">
-      <NavHome />
       <video autoPlay muted loop id="my-video">
         {currentTime.getHours() >= 18 ? (
           <source src={moon} />
@@ -66,15 +79,16 @@ const Home = () => {
           <source src={sky} />
         )}
       </video>
-      <div id="title">
-        {currentTime.getHours() >= 18 ? (
-          <p id="mainTitle">BONSOIR</p>
-        ) : (
-          <p id="mainTitle">BONJOUR</p>
-        )}
-        <p id="subTitle">Quel temps fera-t-il...</p>
-      </div>
+      <NavHome />
       <Container id="searchEngine">
+        <div id="title">
+          {currentTime.getHours() >= 18 ? (
+            <p id="mainTitle">BONSOIR</p>
+          ) : (
+            <p id="mainTitle">BONJOUR</p>
+          )}
+          <p id="subTitle">Quel temps fera-t-il...</p>
+        </div>
         <Button id="buttonLocation" variant="success" onClick={fetchLocal}>
           <FontAwesomeIcon icon={faMapPin} /> ...CHEZ MOI !
         </Button>
@@ -83,26 +97,15 @@ const Home = () => {
           <Form.Control
             id="searchSelect-dropdown"
             as="select"
-            placeholder="Choisissez une région..."
-          >
-            <option value="">Choisissez une région</option>
-          {cities.locations.map((location) => 
-            <option>{location.region}</option>
-          )}
-          </Form.Control>
-          <Form.Control
-            id="searchSelect-dropdown"
-            as="select"
             placeholder="Choisissez une ville..."
-            value={searchCity}
             onChange={handleChange}
           >
-            <option value="">Choisissez une ville</option>
-            <option>Paris</option>
-            <option>Londres</option>
-            <option>Berlin</option>
-            <option>Madrid</option>
-            <option>Bruxelles</option>
+          <option value="">Choisissez une ville</option>
+            {cities.map((city) => (
+              <option value={city} key={city}>
+                {city}
+              </option>
+            ))}
           </Form.Control>
           <Button id="buttonCity" onClick={fetchCity}>
             <FontAwesomeIcon icon={faLocationArrow} />
@@ -111,8 +114,8 @@ const Home = () => {
         <Button id="buttonReset" onClick={resetAll}>
           RÉINITIALISER
         </Button>
-        <CityReport results={results} />
       </Container>
+      <CityReport results={results} />
     </div>
   );
 };
