@@ -7,7 +7,7 @@ import "react-multi-carousel/lib/styles.css";
 const CityReport = ({ results }) => {
 
   return results ? (
-    <Container>
+    <Container id="reportCarousel">
       <h2>
         {results.city.name} ({results.city.country})
       </h2>

@@ -8,6 +8,7 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import NavHome from "../components/NavHome";
 import CityReport from "../components/CityReport";
+import Footer from "../components/Footer";
 import locations from "../data/cities.js";
 import moon from "../assets/video/moon.mp4";
 import sky from "../assets/video/sky.mp4";
@@ -15,12 +16,10 @@ import "./index.scss";
 
 const APIKEY = "c911e035070122cd8ab54a2fd22a2269";
 
-const cities = ["Paris", "Marseille", "Lyon", "Strasbourg", "Bordeaux", "Rennes", "Lille"];
-
 const Home = () => {
   const [currentTime] = useState(new Date());
   const regionOptions = new Map(locations.map((location) => [location.region]));
-  const [selectedRegion, setSelectedRegion] = useState("");
+  const [selectedRegion, setSelectedRegion] = useState();
   const [searchCity, setSearchCity] = useState("");
   const [results, setResults] = useState("");
 
@@ -48,15 +47,22 @@ const Home = () => {
     });
   };
 
-  // const regionChange = (e) => {
-  //   setSelectedRegion(e.target.value);
-  // };
+  const regionChange = (e) => {
+    setSelectedRegion(e.target.value);
+  };
 
-  // useEffect(() => {
-  //   console.log(selectedRegion);
-  //   locations.filter((location) => String(location.region) === selectedRegion);
-  // }, [selectedRegion]);
+  useEffect(() => {
+    console.log(selectedRegion);
+    locations.filter((location) => String(location.region) === selectedRegion);
+  }, [selectedRegion]);
 
+  // const filteredRegion = () => {
+  //   if (selectedRegion !== "") {
+  //     return locations.filter(
+  //       (location) => String(location.region) === selectedRegion
+  //     );
+  //   }
+  // }
 
   const handleChange = (event) => {
     const { value } = event.target;
@@ -97,16 +103,33 @@ const Home = () => {
           <Form.Control
             id="searchSelect-dropdown"
             as="select"
-            placeholder="Choisissez une ville..."
-            onChange={handleChange}
+            placeholder="Choisissez une région..."
+            onChange={regionChange}
           >
-          <option value="">Choisissez une ville</option>
-            {cities.map((city) => (
-              <option value={city} key={city}>
-                {city}
+          <option value="">Région</option>
+            {[...regionOptions].map((region) => (
+              <option value={region} key={region}>
+                {region}
               </option>
             ))}
           </Form.Control>
+          {selectedRegion ? (
+          <Form.Control
+            id="searchSelect-dropdown"
+            as="select"
+            placeholder="Choisissez une ville..."
+            value={searchCity}
+            onChange={handleChange}
+          >
+            {/* {filteredRegion().forEach((city) =>
+          <option>{city}</option>
+          )} */}
+          </Form.Control>
+          ) : (
+            <>
+              
+            </>
+          )}
           <Button id="buttonCity" onClick={fetchCity}>
             <FontAwesomeIcon icon={faLocationArrow} />
           </Button>
@@ -116,6 +139,7 @@ const Home = () => {
         </Button>
       </Container>
       <CityReport results={results} />
+      <Footer />
     </div>
   );
 };

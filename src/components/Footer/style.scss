@@ -1,0 +1,17 @@
+#footer {
+    display:flex;
+    justify-content:center;
+    margin-top:3rem;
+    margin-bottom:2rem;
+    small {
+        font-size:1rem;
+        color:white;
+        font-family:'Rubik', sans-serif;
+        a {
+            color:white;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
