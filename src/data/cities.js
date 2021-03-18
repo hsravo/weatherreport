@@ -1,108 +1,56 @@
-const locations = [
-        {
-            region:"Auvergne-Rhône-Alpes",
-            cities: [
-                "Lyon",
-                "Grenoble",
-                "Clermont-Ferrand"
-            ]
-        },
-        {
-            region:"Bourgogne-Franche-Comté",
-            cities: [
-                "Dijon",
-                "Besançon",
-                "Chalon-sur-Saône"
-            ]
-        },
-        {
-            region:"Bretagne",
-            cities: [
-                "Rennes",
-                "Brest",
-                "Quimper"
-            ]
-        },
-        {
-            region:"Centre-Val de Loire",
-            cities: [
-                "Tours",
-                "Orléans",
-                "Bourges"
-            ]
-        },
-        {
-            region:"Corse",
-            cities: [
-                "Ajaccio",
-                "Bastia",
-                "Porto-Vecchio"
-            ]
-        },
-        {
-            region:"Grand Est",
-            cities: [
-                "Strasbourg",
-                "Metz",
-                "Reims"
-            ]
-        },
-        {
-            region:"Hauts-de-France",
-            cities: [
-                "Lille",
-                "Amiens",
-                "Boulogne-sur-Mer"
-            ]
-        },
-        {
-            region:"Ile-de-France",
-            cities: [
-                "Paris",
-                "Créteil",
-                "Versailles"
-            ]
-        },
-        {
-            region:"Normandie",
-            cities: [
-                "Rouen",
-                "Caen",
-                "Le Havre"
-            ]
-        },
-        {
-            region:"Nouvelle-Aquitaine",
-            cities: [
-                "Bordeaux",
-                "Limoges",
-                "Biarritz"
-            ]
-        },
-        {
-            region:"Occitanie",
-            cities: [
-                "Toulouse",
-                "Montpellier",
-                "Nîmes"
-            ]
-        },
-        {
-            region:"Pays de la Loire",
-            cities: [
-                "Nantes",
-                "Angers",
-                "Le Mans"
-            ]
-        },
-        {
-            region:"Provence-Alpes-Côte d’Azur",
-            cities: [
-                "Marseille",
-                "Nice",
-                "Toulon"
-            ]
-        }
-]
+const regions = [
+  {
+    name: "Auvergne-Rhône-Alpes",
+    cities: ["Lyon", "Grenoble", "Clermont-Ferrand"],
+  },
+  {
+    name: "Bourgogne-Franche-Comté",
+    cities: ["Dijon", "Besançon", "Chalon-sur-Saône"],
+  },
+  {
+    name: "Bretagne",
+    cities: ["Rennes", "Brest", "Quimper"],
+  },
+  {
+    name: "Centre-Val de Loire",
+    cities: ["Tours", "Orléans", "Bourges"],
+  },
+  {
+    name: "Corse",
+    cities: ["Ajaccio", "Bastia", "Porto-Vecchio"],
+  },
+  {
+    name: "Grand Est",
+    cities: ["Strasbourg", "Metz", "Reims"],
+  },
+  {
+    name: "Hauts-de-France",
+    cities: ["Lille", "Amiens", "Boulogne-sur-Mer"],
+  },
+  {
+    name: "Ile-de-France",
+    cities: ["Paris", "Créteil", "Versailles"],
+  },
+  {
+    name: "Normandie",
+    cities: ["Rouen", "Caen", "Le Havre"],
+  },
+  {
+    name: "Nouvelle-Aquitaine",
+    cities: ["Bordeaux", "Limoges", "Biarritz"],
+  },
+  {
+    name: "Occitanie",
+    cities: ["Toulouse", "Montpellier", "Nîmes"],
+  },
+  {
+    name: "Pays de la Loire",
+    cities: ["Nantes", "Angers", "Le Mans"],
+  },
+  {
+    name: "Provence-Alpes-Côte d’Azur",
+    cities: ["Marseille", "Nice", "Toulon"],
+  },
+];
 
-export default locations;
+export default regions;

@@ -9,7 +9,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import NavHome from "../components/NavHome";
 import CityReport from "../components/CityReport";
 import Footer from "../components/Footer";
-import locations from "../data/cities.js";
+import regions from "../data/cities.js";
 import moon from "../assets/video/moon.mp4";
 import sky from "../assets/video/sky.mp4";
 import "./index.scss";
@@ -18,7 +18,6 @@ const APIKEY = "c911e035070122cd8ab54a2fd22a2269";
 
 const Home = () => {
   const [currentTime] = useState(new Date());
-  const regionOptions = new Map(locations.map((location) => [location.region]));
   const [selectedRegion, setSelectedRegion] = useState();
   const [searchCity, setSearchCity] = useState("");
   const [results, setResults] = useState("");
@@ -48,21 +47,16 @@ const Home = () => {
   };
 
   const regionChange = (e) => {
-    setSelectedRegion(e.target.value);
+    const choice = e.target.value;
+    setSelectedRegion(regions.find((region) => {
+      return region.name === choice
+    }));
   };
 
   useEffect(() => {
     console.log(selectedRegion);
-    locations.filter((location) => String(location.region) === selectedRegion);
+    regions.filter((location) => String(location.name) === selectedRegion);
   }, [selectedRegion]);
-
-  // const filteredRegion = () => {
-  //   if (selectedRegion !== "") {
-  //     return locations.filter(
-  //       (location) => String(location.region) === selectedRegion
-  //     );
-  //   }
-  // }
 
   const handleChange = (event) => {
     const { value } = event.target;
@@ -107,9 +101,9 @@ const Home = () => {
             onChange={regionChange}
           >
           <option value="">Région</option>
-            {[...regionOptions].map((region) => (
-              <option value={region} key={region}>
-                {region}
+            {regions.map((region) => (
+              <option value={region.name} key={region.name}>
+                {region.name}
               </option>
             ))}
           </Form.Control>
@@ -121,13 +115,12 @@ const Home = () => {
             value={searchCity}
             onChange={handleChange}
           >
-            {/* {filteredRegion().forEach((city) =>
+            {selectedRegion.cities?.map((city) =>
           <option>{city}</option>
-          )} */}
+          )}
           </Form.Control>
           ) : (
             <>
-              
             </>
           )}
           <Button id="buttonCity" onClick={fetchCity}>
