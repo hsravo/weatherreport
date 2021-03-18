@@ -2,7 +2,7 @@
 
 Simple ReactJS weather report application based on the [Open Weather Map API](https://openweathermap.org/api).
 
-## How to watch the app locally
+## How to run the app locally
 
 In the project directory, you can run:
 ### `npm install`
