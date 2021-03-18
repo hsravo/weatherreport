@@ -100,9 +100,9 @@ const Home = () => {
             placeholder="Choisissez une région..."
             onChange={regionChange}
           >
-          <option value="">Région</option>
-            {regions.map((region) => (
-              <option value={region.name} key={region.name}>
+          <option value="">Choisissez une région</option>
+            {regions.map((region, index) => (
+              <option value={region.name} key={index}>
                 {region.name}
               </option>
             ))}
@@ -115,6 +115,7 @@ const Home = () => {
             value={searchCity}
             onChange={handleChange}
           >
+          <option value="">Ville</option>
             {selectedRegion.cities?.map((city) =>
           <option>{city}</option>
           )}
@@ -123,7 +124,7 @@ const Home = () => {
             <>
             </>
           )}
-          <Button id="buttonCity" onClick={fetchCity}>
+          <Button id="buttonCity" onClick={fetchCity}>GO {"  "}
             <FontAwesomeIcon icon={faLocationArrow} />
           </Button>
         </div>
