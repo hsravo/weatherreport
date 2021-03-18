@@ -9,7 +9,7 @@ const NavHome = () => {
         <Navbar.Brand id="main-title">
         <Clock />
         </Navbar.Brand>
-        <Button id="main-button" href="https://github.com/hsravo/reactmovies" target="_blank">
+        <Button id="main-button" href="https://github.com/hsravo/weatherreport" target="_blank">
           À PROPOS
         </Button>
       </Navbar>
