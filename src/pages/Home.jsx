@@ -26,7 +26,7 @@ const Home = () => {
     const searchTerm = searchCity.trim();
     if (searchTerm !== "") {
       fetch(
-        `http://api.openweathermap.org/data/2.5/forecast?q=${searchTerm}&cnt=12&units=metric&lang=fr&appid=${APIKEY}`
+        `http://api.openweathermap.org/data/2.5/forecast?q=${searchTerm},FR&cnt=12&units=metric&lang=fr&appid=${APIKEY}`
       )
         .then((response) => response.json())
         .then((response) => setResults(response))
@@ -116,8 +116,8 @@ const Home = () => {
             onChange={handleChange}
           >
           <option value="">Ville</option>
-            {selectedRegion.cities?.map((city) =>
-          <option>{city}</option>
+            {selectedRegion.cities?.map((city,index) =>
+          <option value={city} key={index}>{city}</option>
           )}
           </Form.Control>
           ) : (
