@@ -1,6 +1,6 @@
 {
   "name": "weatherreport",
-  "homepage": "https://hsravo.github.io/weatherreport",
+  "homepage": "http://hsravo.github.io/weatherreport",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
