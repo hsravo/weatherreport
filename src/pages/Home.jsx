@@ -66,6 +66,7 @@ const Home = () => {
   };
 
   const resetAll = () => {
+    setSelectedRegion("");
     setSearchCity("");
     setResults("");
   };
@@ -115,9 +116,9 @@ const Home = () => {
             value={searchCity}
             onChange={handleChange}
           >
-          <option value="">Ville</option>
-            {selectedRegion.cities?.map((city,index) =>
-          <option value={city} key={index}>{city}</option>
+          <option value="">Choisissez une ville</option>
+            {selectedRegion.cities?.map((city,idx) =>
+          <option value={city} key={idx}>{city}</option>
           )}
           </Form.Control>
           ) : (
