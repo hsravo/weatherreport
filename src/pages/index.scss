@@ -83,23 +83,6 @@
                         }
                     }
                 }
-                #searchBar {
-                    margin:auto;
-                    text-align: center;
-                    background-color: transparent;
-                    border:1px solid rgba(255, 255, 255, .3);
-                    color:white;
-                    height:3rem;
-                    font-size:2rem;
-                    &:hover {
-                        background-color: rgba(255, 255, 255, 0.1);
-                        transition:0.3s;
-                    }
-                    &:focus {
-                        border-color:white;
-                        box-shadow:0 0 10px rgba(255, 255, 255, .3);
-                    }
-                }
                 #buttonCity {
                     margin-top:1rem;
                     color:white;
@@ -225,23 +208,6 @@
                             }
                         }
                     }
-                    #searchBar {
-                        margin:auto;
-                        text-align: center;
-                        background-color: transparent;
-                        border:1px solid rgba(255, 255, 255, .3);
-                        color:white;
-                        height:3rem;
-                        font-size:2rem;
-                        &:hover {
-                            background-color: rgba(255, 255, 255, 0.1);
-                            transition:0.3s;
-                        }
-                        &:focus {
-                            border-color:white;
-                            box-shadow:0 0 10px rgba(255, 255, 255, .3);
-                        }
-                    }
                     #buttonCity {
                         margin-top:1rem;
                         color:white;
@@ -354,23 +320,6 @@
                             background-color: rgba(255, 255, 255, 0.1) !important;
                             transition:0.3s;
                         }
-                    }
-                }
-                #searchBar {
-                    margin:auto;
-                    text-align: center;
-                    background-color: transparent;
-                    border:1px solid rgba(255, 255, 255, .3);
-                    color:white;
-                    height:3rem;
-                    font-size:2rem;
-                    &:hover {
-                        background-color: rgba(255, 255, 255, 0.1);
-                        transition:0.3s;
-                    }
-                    &:focus {
-                        border-color:white;
-                        box-shadow:0 0 10px rgba(255, 255, 255, .3);
                     }
                 }
                 #buttonCity {
