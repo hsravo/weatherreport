@@ -14,7 +14,7 @@ import moon from "../assets/video/moon.mp4";
 import sky from "../assets/video/sky.mp4";
 import "./index.scss";
 
-const APIKEY = process.env.REACT_APP_API_SECRET_KEY;
+const APIKEY = "c911e035070122cd8ab54a2fd22a2269";
 
 const Home = () => {
   const [currentTime] = useState(new Date());
