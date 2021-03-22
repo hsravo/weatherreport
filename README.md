@@ -2,7 +2,7 @@
 
 Simple ReactJS weather report application based on the [Open Weather Map API](https://openweathermap.org/api).
 
-## [https://hsravo.github.io/weatherreport/]https://hsravo.github.io/weatherreport/
+## [https://hsravo.github.io/weatherreport/](https://hsravo.github.io/weatherreport/)
 
 ## How to run the app locally
 
