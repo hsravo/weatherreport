@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/weatherreport/static/css/main.3a3e37c9.chunk.css",
-    "main.js": "/weatherreport/static/js/main.4bff1ecc.chunk.js",
-    "main.js.map": "/weatherreport/static/js/main.4bff1ecc.chunk.js.map",
+    "main.js": "/weatherreport/static/js/main.bca85389.chunk.js",
+    "main.js.map": "/weatherreport/static/js/main.bca85389.chunk.js.map",
     "runtime-main.js": "/weatherreport/static/js/runtime-main.ad733024.js",
     "runtime-main.js.map": "/weatherreport/static/js/runtime-main.ad733024.js.map",
     "static/css/2.e8d703c3.chunk.css": "/weatherreport/static/css/2.e8d703c3.chunk.css",
@@ -14,13 +14,13 @@
     "static/js/2.fd1cd08b.chunk.js.LICENSE.txt": "/weatherreport/static/js/2.fd1cd08b.chunk.js.LICENSE.txt",
     "static/media/moon.dfe7d45d.mp4": "/weatherreport/static/media/moon.dfe7d45d.mp4",
     "static/media/styles.css": "/weatherreport/static/media/revicons.e8746a62.woff",
-    "static/media/sky.22e3b30a.mp4": "/weatherreport/static/media/sky.22e3b30a.mp4"
+    "static/media/rocamadour.52f6aefd.mp4": "/weatherreport/static/media/rocamadour.52f6aefd.mp4"
   },
   "entrypoints": [
     "static/js/runtime-main.ad733024.js",
     "static/css/2.e8d703c3.chunk.css",
     "static/js/2.fd1cd08b.chunk.js",
     "static/css/main.3a3e37c9.chunk.css",
-    "static/js/main.4bff1ecc.chunk.js"
+    "static/js/main.bca85389.chunk.js"
   ]
 }
