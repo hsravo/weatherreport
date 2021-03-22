@@ -11,7 +11,7 @@ import CityReport from "../components/CityReport";
 import Footer from "../components/Footer";
 import regions from "../data/cities.js";
 import moon from "../assets/video/moon.mp4";
-import sky from "../assets/video/sky.mp4";
+import rocamadour from "../assets/video/rocamadour.mp4";
 import "./index.scss";
 
 const APIKEY = process.env.REACT_APP_API_SECRET_KEY;
@@ -77,7 +77,7 @@ const Home = () => {
         {currentTime.getHours() >= 18 ? (
           <source src={moon} />
         ) : (
-          <source src={sky} />
+          <source src={rocamadour} />
         )}
       </video>
       <NavHome />
