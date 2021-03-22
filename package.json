@@ -1,6 +1,6 @@
 {
   "name": "weatherreport",
-  "homepage": "http://hsravo.github.io/weatherreport",
+  "homepage": "https://hsravo.github.io/weatherreport",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -25,8 +25,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "predeploy":"npm run build",
-    "deploy":"gh-pages -d build"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
