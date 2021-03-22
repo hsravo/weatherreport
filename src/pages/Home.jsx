@@ -26,7 +26,7 @@ const Home = () => {
     const searchTerm = searchCity.trim();
     if (searchTerm !== "") {
       fetch(
-        `http://api.openweathermap.org/data/2.5/forecast?q=${searchTerm},FR&cnt=12&units=metric&lang=fr&appid=${APIKEY}`
+        `https://api.openweathermap.org/data/2.5/forecast?q=${searchTerm},FR&cnt=12&units=metric&lang=fr&appid=${APIKEY}`
       )
         .then((response) => response.json())
         .then((response) => setResults(response))
@@ -38,7 +38,7 @@ const Home = () => {
     console.log("geo on");
     navigator.geolocation.getCurrentPosition((position) => {
       fetch(
-        `http://api.openweathermap.org/data/2.5/forecast?lat=${position.coords.latitude}&lon=${position.coords.longitude}&cnt=12&units=metric&lang=fr&appid=${APIKEY}`
+        `https://api.openweathermap.org/data/2.5/forecast?lat=${position.coords.latitude}&lon=${position.coords.longitude}&cnt=12&units=metric&lang=fr&appid=${APIKEY}`
       )
         .then((response) => response.json())
         .then((response) => setResults(response))
