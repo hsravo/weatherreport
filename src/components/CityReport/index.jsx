@@ -1,4 +1,4 @@
-import { Container, Row } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import ReportCard from "../ReportCard";
 import "./style.scss";
 import Carousel from "react-multi-carousel";

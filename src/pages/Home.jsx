@@ -1,10 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { Button, Form, Jumbotron, Container } from "react-bootstrap";
-import {
-  faCompass,
-  faMapPin,
-  faLocationArrow,
-} from "@fortawesome/free-solid-svg-icons";
+import { Button, Form, Container } from "react-bootstrap";
+import { faMapPin, faLocationArrow } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import NavHome from "../components/NavHome";
 import CityReport from "../components/CityReport";
@@ -48,9 +44,11 @@ const Home = () => {
 
   const regionChange = (e) => {
     const choice = e.target.value;
-    setSelectedRegion(regions.find((region) => {
-      return region.name === choice
-    }));
+    setSelectedRegion(
+      regions.find((region) => {
+        return region.name === choice;
+      })
+    );
   };
 
   useEffect(() => {
@@ -90,7 +88,7 @@ const Home = () => {
           )}
           <p id="subTitle">Quel temps fera-t-il...</p>
         </div>
-        <Button id="buttonLocation" variant="success" onClick={fetchLocal}>
+        <Button id="buttonLocation" onClick={fetchLocal}>
           <FontAwesomeIcon icon={faMapPin} /> ...CHEZ MOI !
         </Button>
         <div id="searchSelect">
@@ -101,7 +99,7 @@ const Home = () => {
             placeholder="Choisissez une région..."
             onChange={regionChange}
           >
-          <option value="">Choisissez une région</option>
+            <option value="">Choisissez une région</option>
             {regions.map((region, index) => (
               <option value={region.name} key={index}>
                 {region.name}
@@ -109,31 +107,44 @@ const Home = () => {
             ))}
           </Form.Control>
           {selectedRegion ? (
-          <Form.Control
-            id="searchSelect-dropdown"
-            as="select"
-            placeholder="Choisissez une ville..."
-            value={searchCity}
-            onChange={handleChange}
-          >
-          <option value="">Choisissez une ville</option>
-            {selectedRegion.cities?.map((city,idx) =>
-          <option value={city} key={idx}>{city}</option>
-          )}
-          </Form.Control>
+            <Form.Control
+              id="searchSelect-dropdown"
+              as="select"
+              placeholder="Choisissez une ville..."
+              value={searchCity}
+              onChange={handleChange}
+            >
+              <option value="">Choisissez une ville</option>
+              {selectedRegion.cities?.map((city, idx) => (
+                <option value={city} key={idx}>
+                  {city}
+                </option>
+              ))}
+            </Form.Control>
           ) : (
-            <>
-            </>
+            <></>
           )}
-          <Button id="buttonCity" onClick={fetchCity}>GO {"  "}
+          <Button id="buttonCity" onClick={fetchCity}>
+            GO {"  "}
             <FontAwesomeIcon icon={faLocationArrow} />
           </Button>
         </div>
-        <Button id="buttonReset" onClick={resetAll}>
-          RÉINITIALISER
-        </Button>
+        {results ? (
+          <>
+            <div className="scrollingDown">
+              <div className="mousey">
+                <div className="scroller"></div>
+              </div>
+            </div>
+            <CityReport results={results} />
+            <Button id="buttonReset" onClick={resetAll}>
+              RÉINITIALISER
+            </Button>
+          </>
+        ) : (
+          <div className="ringLoader"></div>
+        )}
       </Container>
-      <CityReport results={results} />
       <Footer />
     </div>
   );
