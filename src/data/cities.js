@@ -1,19 +1,19 @@
 const regions = [
   {
     name: "Auvergne-Rhône-Alpes",
-    cities: ["Lyon", "Grenoble", "Clermont-Ferrand"],
+    cities: ["Lyon", "Saint-Étienne", "Grenoble", "Clermont-Ferrand", "Annecy"],
   },
   {
     name: "Bourgogne-Franche-Comté",
-    cities: ["Dijon", "Besançon", "Chalon-sur-Saône"],
+    cities: ["Dijon", "Besançon", "Belfort", "Chalon-sur-Saône", "Mâcon"],
   },
   {
     name: "Bretagne",
-    cities: ["Rennes", "Brest", "Quimper"],
+    cities: ["Rennes", "Brest", "Quimper", "Vannes", "Saint-Brieuc"],
   },
   {
     name: "Centre-Val de Loire",
-    cities: ["Tours", "Orléans", "Bourges"],
+    cities: ["Tours", "Orléans", "Bourges", "Blois", "Châteauroux"],
   },
   {
     name: "Corse",
@@ -21,35 +21,35 @@ const regions = [
   },
   {
     name: "Grand Est",
-    cities: ["Strasbourg", "Metz", "Reims"],
+    cities: ["Strasbourg", "Metz", "Nancy", "Reims", "Troyes"],
   },
   {
     name: "Hauts-de-France",
-    cities: ["Lille", "Amiens", "Boulogne-sur-Mer"],
+    cities: ["Lille", "Amiens", "Calais", "Dunkerque", "Boulogne-sur-Mer"],
   },
   {
     name: "Ile-de-France",
-    cities: ["Paris", "Créteil", "Versailles"],
+    cities: ["Paris", "Créteil", "Versailles", "Nanterre", "Saint-Denis"],
   },
   {
     name: "Normandie",
-    cities: ["Rouen", "Caen", "Le Havre"],
+    cities: ["Le Havre", "Rouen", "Caen", "Cherbourg", "Évreux"],
   },
   {
     name: "Nouvelle-Aquitaine",
-    cities: ["Bordeaux", "Limoges", "Biarritz"],
+    cities: ["Bordeaux", "Limoges", "Poitiers", "La Rochelle", "Pau"],
   },
   {
     name: "Occitanie",
-    cities: ["Toulouse", "Montpellier", "Nîmes"],
+    cities: ["Toulouse", "Montpellier", "Nîmes", "Perpignan", "Béziers"],
   },
   {
     name: "Pays de la Loire",
-    cities: ["Nantes", "Angers", "Le Mans"],
+    cities: ["Nantes", "Angers", "Le Mans", "Saint-Nazaire", "Cholet"],
   },
   {
     name: "Provence-Alpes-Côte d’Azur",
-    cities: ["Marseille", "Nice", "Toulon"],
+    cities: ["Marseille", "Nice", "Toulon", "Aix-en-Provence", "Avignon"],
   },
 ];
 
