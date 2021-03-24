@@ -18,6 +18,12 @@ const Home = () => {
   const [searchCity, setSearchCity] = useState("");
   const [results, setResults] = useState("");
 
+  const day = () => {
+    if (currentTime.getHours() < 18 || currentTime.getHours() > 6) {
+    return true
+    }
+  }
+
   const fetchCity = () => {
     const searchTerm = searchCity.trim();
     if (searchTerm !== "") {
@@ -72,19 +78,19 @@ const Home = () => {
   return (
     <div id="fullHomepage">
       <video autoPlay muted loop id="my-video">
-        {currentTime.getHours() >= 18 ? (
-          <source src={moon} />
-        ) : (
+        {day() ? (
           <source src={rocamadour} />
+        ) : (
+          <source src={moon} />
         )}
       </video>
       <NavHome />
       <Container id="searchEngine">
         <div id="title">
-          {currentTime.getHours() >= 18 ? (
-            <p id="mainTitle">BONSOIR</p>
-          ) : (
+          {day() ? (
             <p id="mainTitle">BONJOUR</p>
+          ) : (
+            <p id="mainTitle">BONSOIR</p>
           )}
           <p id="subTitle">Quel temps fera-t-il...</p>
         </div>
