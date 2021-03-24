@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/weatherreport/static/css/main.92ae4b9b.chunk.css",
+    "main.css": "/weatherreport/static/css/main.6bd22856.chunk.css",
     "main.js": "/weatherreport/static/js/main.9a976c61.chunk.js",
     "main.js.map": "/weatherreport/static/js/main.9a976c61.chunk.js.map",
     "runtime-main.js": "/weatherreport/static/js/runtime-main.ad733024.js",
@@ -10,7 +10,7 @@
     "static/js/2.fd1cd08b.chunk.js.map": "/weatherreport/static/js/2.fd1cd08b.chunk.js.map",
     "index.html": "/weatherreport/index.html",
     "static/css/2.e8d703c3.chunk.css.map": "/weatherreport/static/css/2.e8d703c3.chunk.css.map",
-    "static/css/main.92ae4b9b.chunk.css.map": "/weatherreport/static/css/main.92ae4b9b.chunk.css.map",
+    "static/css/main.6bd22856.chunk.css.map": "/weatherreport/static/css/main.6bd22856.chunk.css.map",
     "static/js/2.fd1cd08b.chunk.js.LICENSE.txt": "/weatherreport/static/js/2.fd1cd08b.chunk.js.LICENSE.txt",
     "static/media/moon.dfe7d45d.mp4": "/weatherreport/static/media/moon.dfe7d45d.mp4",
     "static/media/styles.css": "/weatherreport/static/media/revicons.e8746a62.woff",
@@ -20,7 +20,7 @@
     "static/js/runtime-main.ad733024.js",
     "static/css/2.e8d703c3.chunk.css",
     "static/js/2.fd1cd08b.chunk.js",
-    "static/css/main.92ae4b9b.chunk.css",
+    "static/css/main.6bd22856.chunk.css",
     "static/js/main.9a976c61.chunk.js"
   ]
 }
