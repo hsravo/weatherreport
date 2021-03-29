@@ -19,7 +19,7 @@ const Home = () => {
   const [results, setResults] = useState("");
 
   const day = () => {
-    if (currentTime.getHours() < 18 || currentTime.getHours() > 6) {
+    if (currentTime.getHours() < 18 && currentTime.getHours() > 6) {
     return true
     }
   }
